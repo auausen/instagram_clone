@@ -14,7 +14,7 @@ const StatusBar = () => {
   const getData = () => {
     let data = [
       {
-        username: "anindya_bunny",
+        username: "abcd",
         imageURL: "../../images/pp1.png",
       },
       {
@@ -23,44 +23,8 @@ const StatusBar = () => {
       },{
         username: "anindya_bunny",
         imageURL: "../../images/pp1.png",
-      },
-      {
-        username: "testing",
-        imageURL: "../../images/pp1.png",
       },{
         username: "anindya_bunny",
-        imageURL: "../../images/pp1.png",
-      },
-      {
-        username: "testing",
-        imageURL: "../../images/pp1.png",
-      },{
-        username: "anindya_bunny",
-        imageURL: "../../images/pp1.png",
-      },
-      {
-        username: "testing",
-        imageURL: "../../images/pp1.png",
-      },{
-        username: "anindya_bunny",
-        imageURL: "../../images/pp1.png",
-      },
-      {
-        username: "testing",
-        imageURL: "../../images/pp1.png",
-      },{
-        username: "anindya_bunny",
-        imageURL: "../../images/pp1.png",
-      },
-      {
-        username: "testing",
-        imageURL: "../../images/pp1.png",
-      },{
-        username: "anindya_bunny",
-        imageURL: "../../images/pp1.png",
-      },
-      {
-        username: "testing",
         imageURL: "../../images/pp1.png",
       },
     ];
@@ -72,7 +36,7 @@ const StatusBar = () => {
       {statusList.map((item, index) => (
         <div className="status">
           <Avatar className="statusbar__status" src={statusimg} />
-          <div className="statusbar__text">anidya_bunny</div>
+          <div className="statusbar__text">{item.username}</div>
         </div>
       ))}
     </div>

@@ -1,10 +1,14 @@
 import React from 'react'
+import Post from '../Post/Post'
 import "./MainPage.css"
 
 const MainPage = () => {
   return (
     <div>
-      POST
+      <Post />
+      <Post />
+      <Post />
+      <Post />
     </div>
   )
 }
