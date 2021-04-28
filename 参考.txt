@@ -2,3 +2,8 @@ https://www.youtube.com/playlist?list=PLtwLEdgwCmnUsGJebQP-NjTuC7FlrLjNR
 2/4
 
 1:29:14
+
+
+https://dashboard.heroku.com/apps
+
+https://console.firebase.google.com/?hl=ja
