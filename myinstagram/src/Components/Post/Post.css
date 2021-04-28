@@ -1,21 +1,34 @@
-.post__container{
+.post__container {
   width: 615px;
-  height: 700px;
   border: 1px solid #dbdbdb;
   background-color: white;
   margin-top: 25px;
 }
-.post__header{
+.post__header {
   height: 60px;
   border-bottom: 1px solid #dbdbdb;
   display: flex;
 }
-.post__image{
+.post__image {
   min-width: 30px;
-  min-height:30px;
+  min-height: 30px;
   margin: 10px;
 }
-.post__username{
+.post__username {
   font-weight: bold;
   margin-top: 20px;
+}
+.post__reactimage {
+  width: 25px;
+  margin: 5px;
+}
+.post__comment {
+  margin: 10px;
+}
+.post__commentbox {
+  height: 56px;
+  width: 608px;
+  border: 1px solid #dbdbdb;
+  font-size: 16px;
+  padding-left: 10px;
 }
