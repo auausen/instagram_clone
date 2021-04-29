@@ -5,19 +5,39 @@ import postimage from "../../images/post.jpg";
 import love from "../../images/love.svg";
 import comment from "../../images/comment.svg";
 import share from "../../images/share.svg";
+import { useState } from "react";
+import { useEffect } from "react";
 
-const Post = () => {
+const Post = (props) => {
+  const [commentList, setcommentList] = useState([]);
+
+  useEffect(() => {
+    getComments();
+  }, []);
+
+  const getComments = () => {
+    let data = [
+      {
+        username: "ASD",
+        commentId: "1234",
+        timeStamp: "123456",
+        description: "comment 1",
+      },
+    ];
+    setcommentList(data);
+  };
+
   return (
     <div className="post__container">
       {/* Header */}
       <div className="post__header">
-        <Avatar className="post__image" src="" />
-        <div className="post__username">Username</div>
+        <Avatar className="post__image" src={props.profileImage} />
+        <div className="post__username">{props.userName}</div>
       </div>
 
       {/* Image */}
       <div>
-        <img src={postimage} width="615px" />
+        <img src={props.postImage} width="615px" />
       </div>
 
       {/* Analytics */}
@@ -27,16 +47,23 @@ const Post = () => {
           <img src="{comment}" className="post_reactimage" />
           <img src="{share}" className="post_reactimage" />
         </div>
-        <div style={{ boldWeight: "bold", marginLeft: "20px" }}>7749 likes</div>
+        <div style={{ boldWeight: "bold", marginLeft: "20px" }}>
+          {props.likes} likes
+        </div>
       </div>
 
       {/* Comment Section */}
       <div>
-        <div className="post__comment">Hello comment 1</div>
-        <div className="post__comment">Hello comment 1</div>
-        <div className="post__comment">Hello comment 1</div>
-        <div className="post__comment">Hello comment 1</div>
-        <input text="text" className="post__commentbox" placeholder="add a comment..." />
+        {commentList.map((item, index) => (
+          <div className="post__comment">
+            {item.username}:{item.description}
+          </div>
+        ))}
+        <input
+          text="text"
+          className="post__commentbox"
+          placeholder="add a comment..."
+        />
       </div>
     </div>
   );

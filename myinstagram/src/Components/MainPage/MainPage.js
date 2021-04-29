@@ -5,7 +5,7 @@ import "./MainPage.css"
 const MainPage = () => {
   return (
     <div>
-      <Post />
+      <Post id="1234" userName="asd" postImage="https://unsplash.com/photos/F5G-bsQO-Co" likes="1234" profileImage="" />
       <Post />
       <Post />
       <Post />
