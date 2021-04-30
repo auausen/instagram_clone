@@ -1,7 +1,8 @@
 https://www.youtube.com/playlist?list=PLtwLEdgwCmnUsGJebQP-NjTuC7FlrLjNR
-2/4
+3/4
 
-1:29:14
+1:21:35
+
 
 
 https://dashboard.heroku.com/apps

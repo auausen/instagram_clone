@@ -3,6 +3,7 @@ import React from "react";
 import "./StatusBar.css";
 import statusimg from "../../images/pp1.png";
 import { useState, useEffect } from "react";
+import uploadimage from "../../images/statusadd.png";
 
 const StatusBar = () => {
   const [statusList, setstatusList] = useState([]);
@@ -20,10 +21,12 @@ const StatusBar = () => {
       {
         username: "testing",
         imageURL: "../../images/pp1.png",
-      },{
+      },
+      {
         username: "anindya_bunny",
         imageURL: "../../images/pp1.png",
-      },{
+      },
+      {
         username: "anindya_bunny",
         imageURL: "../../images/pp1.png",
       },
@@ -33,6 +36,7 @@ const StatusBar = () => {
 
   return (
     <div className="statusbar__container">
+      <img src={uploadimage} className="statusbar__upload" width="55px" height="55px" />
       {statusList.map((item, index) => (
         <div className="status">
           <Avatar className="statusbar__status" src={statusimg} />

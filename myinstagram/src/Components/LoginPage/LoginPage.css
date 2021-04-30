@@ -71,7 +71,7 @@ body {
 }
 .loginpage__signupoption{
   margin-top: 25px;
-  height: 36px;
+  height: 56px;
   width: 356px;
   border: 1px solid #dbdbdb;
   background-color: white;
@@ -80,6 +80,7 @@ body {
 
 .loginPage__signin{
   margin-top: 20px;
+
 }
 
 .loginPage__signup{

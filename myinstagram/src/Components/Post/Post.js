@@ -15,13 +15,23 @@ const Post = (props) => {
     getComments();
   }, []);
 
-  const getComments = () => {
+  const getComments = () => { // API backend
     let data = [
       {
         username: "ASD",
         commentId: "1234",
         timeStamp: "123456",
         description: "comment 1",
+      },{
+        username: "anidanya",
+        commentId: "1234",
+        timeStamp: "123456",
+        description: "comment 2",
+      },{
+        username: "guto",
+        commentId: "1234",
+        timeStamp: "123456",
+        description: "comment 3",
       },
     ];
     setcommentList(data);
@@ -34,7 +44,7 @@ const Post = (props) => {
         <Avatar className="post__image" src={props.profileImage} />
         <div className="post__username">{props.userName}</div>
       </div>
-
+ 
       {/* Image */}
       <div>
         <img src={props.postImage} width="615px" />

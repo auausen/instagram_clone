@@ -51,8 +51,8 @@ const LoginPage = () => {
                   <div className="loginPage__signin">
                     Don't have an account?
                     <span
-                      onClick={changeLogin}
                       style={{ fontWeight: "bold", color: "#0395F6" }}
+                      onClick={changeLogin}
                     >
                       Sign up
                     </span>
@@ -61,8 +61,8 @@ const LoginPage = () => {
                   <div className="loginPage__signup">
                     Have an account?
                     <span
-                      onClick={changeLogin}
                       style={{ fontWeight: "bold", color: "#0395F6" }}
+                      onClick={changeLogin}
                     >
                       Sign in
                     </span>
