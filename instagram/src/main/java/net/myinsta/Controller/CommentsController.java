@@ -2,6 +2,8 @@ package net.myinsta.Controller;
 
 import java.util.ArrayList;
 
+import net.myinsta.Service.CommentsService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,13 +17,16 @@ import net.myinsta.Entity.Comments;
 @RequestMapping("/comments")
 public class CommentsController {
 
-	@PostMapping("")
-	private Comments submitComment(@RequestBody Comments comment) {
-		return new Comments();
-	}
-	
-	@GetMapping("/{postId}")
-	private ArrayList<Comments> getCommentsForPost(@PathVariable("postId") String postId){
-		return new ArrayList<Comments>();
-	}
+    @Autowired
+    CommentsService commentsService;
+
+    @PostMapping("")
+    private Comments submitComment(@RequestBody Comments comment) {
+        return commentsService.submitCommentToDB(comment);
+    }
+
+    @GetMapping("/{postId}")
+    private ArrayList<Comments> getCommentsForPost(@PathVariable("postId") String postId) {
+        return commentsService.getAllCommentsForDB(postId);
+    }
 }

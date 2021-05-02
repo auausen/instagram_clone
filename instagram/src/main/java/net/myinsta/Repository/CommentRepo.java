@@ -10,7 +10,7 @@ import net.myinsta.Entity.Comments;
 @Repository
 public interface CommentRepo extends CrudRepository<Comments, Integer> {
 
-	Comments save(Comments comment);
+    Comments save(Comments comment);
 
-	ArrayList<Comments> findAllByPostId(String postId);
+    ArrayList<Comments> findAllByPostId(String postId);
 }

@@ -11,25 +11,25 @@ import net.myinsta.Repository.StatusRepo;
 @Service
 public class StatusService {
 
-	@Autowired
-	StatusRepo statusRepo;
+    @Autowired
+    StatusRepo statusRepo;
 
-	@Autowired
-	UserService userService;
+    @Autowired
+    UserService userService;
 
-	public Status submitDataIntoDB(Status status) {
-		return statusRepo.save(status);
-	}
+    public Status submitDataIntoDB(Status status) {
+        return statusRepo.save(status);
+    }
 
-	public ArrayList<Status> retrieveArrayList() {
+    public ArrayList<Status> retrieveArrayList() {
 
-		ArrayList<Status> statusList = statusRepo.findAll();
+        ArrayList<Status> statusList = statusRepo.findAll();
 
-		for (int i = 0; i < statusList.size(); i++) {
-			Status statusItem = statusList.get(i);
-			statusItem.setUserName(userService.displayUserMetaData(statusItem.getUserId()).getUserName());
-		}
+        for (int i = 0; i < statusList.size(); i++) {
+            Status statusItem = statusList.get(i);
+            statusItem.setUserName(userService.displayUserMetaData(statusItem.getUserId()).getUserName());
+        }
 
-		return statusList;
-	}
+        return statusList;
+    }
 }

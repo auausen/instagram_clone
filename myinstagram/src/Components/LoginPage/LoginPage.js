@@ -31,7 +31,7 @@ const LoginPage = () => {
               <div className="loginpage_rightcomponent">
                 <img className="loginpage__logo" src={insta_logo} />
                 <div className="loginPage__singin">
-                  {isLogin ? <SignIN /> : <SignUp />}
+                  {isLogin ? <SignUp /> : <SignIN />}
                   <div className="login__ordiv">
                     <div className="login__dividor"></div>
                     <div className="login__or">OR</div>
